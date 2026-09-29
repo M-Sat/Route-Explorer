@@ -1,6 +1,9 @@
-# Regional Route Explorer
+# Route Explorer
 
 An interactive, browser-based map for exploring routes across Europe, the contiguous United States, and the United States plus Canada. Choose two regions to compare a route with the fewest borders against one with the shortest total distance.
+
+## Screenshot
+<img width="1920" height="888" alt="image" src="https://github.com/user-attachments/assets/eae324c7-c0ee-45e5-a734-489ff6308697" />
 
 ## Features
 
@@ -70,11 +73,3 @@ The map outlines and city locations are fetched at runtime from these sources:
 - [Click That Hood Canada GeoJSON](https://github.com/codeforgermany/click_that_hood) for Canadian boundaries.
 - [OpenStreetMap](https://www.openstreetmap.org/) for map tiles.
 - [Leaflet](https://leafletjs.com/) for the interactive map library, loaded from unpkg.
-
-These resources are external dependencies, so their availability and terms apply when running or publishing the app. OpenStreetMap attribution is displayed on the map.
-
-## Suggested GitHub repository details
-
-**Repository name:** `regional-route-explorer`
-
-**Description:** `Interactive map comparing fewest-border and shortest-distance routes across Europe, the United States, and Canada using BFS and Dijkstra.`
