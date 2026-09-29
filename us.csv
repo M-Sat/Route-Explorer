@@ -1,0 +1,214 @@
+Alabama,Florida,Birmingham,Miami,1072
+Alabama,Georgia,Birmingham,Atlanta,226
+Alabama,Mississippi,Birmingham,Jackson,343
+Alabama,Tennessee,Birmingham,Nashville,294
+Arizona,California,Phoenix,Los Angeles,574
+Arizona,Colorado,Phoenix,Denver,942
+Arizona,Nevada,Phoenix,Las Vegas,412
+Arizona,New Mexico,Phoenix,Albuquerque,530
+Arizona,Utah,Phoenix,Salt Lake City,813
+Arkansas,Louisiana,Little Rock,New Orleans,572
+Arkansas,Mississippi,Little Rock,Jackson,335
+Arkansas,Missouri,Little Rock,St. Louis,470
+Arkansas,Oklahoma,Little Rock,Oklahoma City,482
+Arkansas,Tennessee,Little Rock,Nashville,523
+Arkansas,Texas,Little Rock,Dallas,471
+California,Arizona,Los Angeles,Phoenix,574
+California,Nevada,Los Angeles,Las Vegas,368
+California,Oregon,Los Angeles,Portland,1329
+Colorado,Arizona,Denver,Phoenix,942
+Colorado,Kansas,Denver,Wichita,702
+Colorado,Nebraska,Denver,Omaha,784
+Colorado,New Mexico,Denver,Albuquerque,538
+Colorado,Oklahoma,Denver,Oklahoma City,811
+Colorado,Utah,Denver,Salt Lake City,596
+Colorado,Wyoming,Denver,Cheyenne,156
+Connecticut,Massachusetts,Hartford,Boston,149
+Connecticut,New York,Hartford,New York,162
+Connecticut,Rhode Island,Hartford,Providence,105
+Delaware,Maryland,Wilmington,Baltimore,104
+Delaware,New Jersey,Wilmington,Newark,160
+Delaware,Pennsylvania,Wilmington,Philadelphia,40
+Florida,Alabama,Miami,Birmingham,1072
+Florida,Georgia,Miami,Atlanta,975
+Georgia,Alabama,Atlanta,Birmingham,226
+Georgia,Florida,Atlanta,Miami,975
+Georgia,North Carolina,Atlanta,Charlotte,364
+Georgia,South Carolina,Atlanta,Greenville,220
+Georgia,Tennessee,Atlanta,Nashville,346
+Idaho,Montana,Boise,Billings,654
+Idaho,Nevada,Boise,Las Vegas,833
+Idaho,Oregon,Boise,Portland,555
+Idaho,Utah,Boise,Salt Lake City,476
+Idaho,Washington,Boise,Seattle,651
+Idaho,Wyoming,Boise,Cheyenne,974
+Illinois,Indiana,Chicago,Indianapolis,265
+Illinois,Iowa,Chicago,Des Moines,498
+Illinois,Kentucky,Chicago,Louisville,433
+Illinois,Missouri,Chicago,St. Louis,422
+Illinois,Wisconsin,Chicago,Milwaukee,131
+Indiana,Illinois,Indianapolis,Chicago,265
+Indiana,Kentucky,Indianapolis,Louisville,172
+Indiana,Michigan,Indianapolis,Detroit,386
+Indiana,Ohio,Indianapolis,Columbus,270
+Iowa,Illinois,Des Moines,Chicago,498
+Iowa,Minnesota,Des Moines,Minneapolis,378
+Iowa,Missouri,Des Moines,St. Louis,439
+Iowa,Nebraska,Des Moines,Omaha,196
+Iowa,South Dakota,Des Moines,Sioux Falls,335
+Iowa,Wisconsin,Des Moines,Milwaukee,497
+Kansas,Colorado,Wichita,Denver,702
+Kansas,Missouri,Wichita,St. Louis,632
+Kansas,Nebraska,Wichita,Omaha,415
+Kansas,Oklahoma,Wichita,Oklahoma City,247
+Kentucky,Illinois,Louisville,Chicago,433
+Kentucky,Indiana,Louisville,Indianapolis,172
+Kentucky,Missouri,Louisville,St. Louis,389
+Kentucky,Ohio,Louisville,Columbus,305
+Kentucky,Tennessee,Louisville,Nashville,249
+Kentucky,Virginia,Louisville,Virginia Beach,876
+Kentucky,West Virginia,Louisville,Charleston,360
+Louisiana,Arkansas,New Orleans,Little Rock,572
+Louisiana,Mississippi,New Orleans,Jackson,261
+Louisiana,Texas,New Orleans,Dallas,711
+Maine,New Hampshire,Portland,Manchester,122
+Maryland,Delaware,Baltimore,Wilmington,104
+Maryland,Pennsylvania,Baltimore,Philadelphia,144
+Maryland,Virginia,Baltimore,Virginia Beach,277
+Maryland,West Virginia,Baltimore,Charleston,447
+Massachusetts,Connecticut,Boston,Hartford,149
+Massachusetts,New Hampshire,Boston,Manchester,78
+Massachusetts,New York,Boston,New York,306
+Massachusetts,Rhode Island,Boston,Providence,66
+Massachusetts,Vermont,Boston,Burlington,293
+Michigan,Indiana,Detroit,Indianapolis,386
+Michigan,Ohio,Detroit,Columbus,264
+Michigan,Wisconsin,Detroit,Milwaukee,405
+Minnesota,Iowa,Minneapolis,Des Moines,378
+Minnesota,North Dakota,Minneapolis,Fargo,345
+Minnesota,South Dakota,Minneapolis,Sioux Falls,319
+Minnesota,Wisconsin,Minneapolis,Milwaukee,480
+Mississippi,Alabama,Jackson,Birmingham,343
+Mississippi,Arkansas,Jackson,Little Rock,335
+Mississippi,Louisiana,Jackson,New Orleans,261
+Mississippi,Tennessee,Jackson,Nashville,531
+Missouri,Arkansas,St. Louis,Little Rock,470
+Missouri,Illinois,St. Louis,Chicago,422
+Missouri,Iowa,St. Louis,Des Moines,439
+Missouri,Kansas,St. Louis,Wichita,632
+Missouri,Kentucky,St. Louis,Louisville,389
+Missouri,Nebraska,St. Louis,Omaha,570
+Missouri,Oklahoma,St. Louis,Oklahoma City,738
+Missouri,Tennessee,St. Louis,Nashville,408
+Montana,Idaho,Billings,Boise,654
+Montana,North Dakota,Billings,Fargo,906
+Montana,South Dakota,Billings,Sioux Falls,963
+Montana,Wyoming,Billings,Cheyenne,596
+Nebraska,Colorado,Omaha,Denver,784
+Nebraska,Iowa,Omaha,Des Moines,196
+Nebraska,Kansas,Omaha,Wichita,415
+Nebraska,Missouri,Omaha,St. Louis,570
+Nebraska,South Dakota,Omaha,Sioux Falls,263
+Nebraska,Wyoming,Omaha,Cheyenne,743
+Nevada,Arizona,Las Vegas,Phoenix,412
+Nevada,California,Las Vegas,Los Angeles,368
+Nevada,Idaho,Las Vegas,Boise,833
+Nevada,Oregon,Las Vegas,Portland,1216
+Nevada,Utah,Las Vegas,Salt Lake City,583
+New Hampshire,Maine,Manchester,Portland,122
+New Hampshire,Massachusetts,Manchester,Boston,78
+New Hampshire,Vermont,Manchester,Burlington,217
+New Jersey,Delaware,Newark,Wilmington,160
+New Jersey,New York,Newark,New York,14
+New Jersey,Pennsylvania,Newark,Philadelphia,121
+New Mexico,Arizona,Albuquerque,Phoenix,530
+New Mexico,Colorado,Albuquerque,Denver,538
+New Mexico,Oklahoma,Albuquerque,Oklahoma City,830
+New Mexico,Texas,Albuquerque,Dallas,944
+New Mexico,Utah,Albuquerque,Salt Lake City,780
+New York,Connecticut,New York,Hartford,162
+New York,Massachusetts,New York,Boston,306
+New York,New Jersey,New York,Newark,14
+New York,Pennsylvania,New York,Philadelphia,130
+New York,Vermont,New York,Burlington,423
+North Carolina,Georgia,Charlotte,Atlanta,364
+North Carolina,South Carolina,Charlotte,Greenville,147
+North Carolina,Tennessee,Charlotte,Nashville,546
+North Carolina,Virginia,Charlotte,Virginia Beach,473
+North Dakota,Minnesota,Fargo,Minneapolis,345
+North Dakota,Montana,Fargo,Billings,906
+North Dakota,South Dakota,Fargo,Sioux Falls,371
+Ohio,Indiana,Columbus,Indianapolis,270
+Ohio,Kentucky,Columbus,Louisville,305
+Ohio,Michigan,Columbus,Detroit,264
+Ohio,Pennsylvania,Columbus,Philadelphia,668
+Ohio,West Virginia,Columbus,Charleston,214
+Oklahoma,Arkansas,Oklahoma City,Little Rock,482
+Oklahoma,Colorado,Oklahoma City,Denver,811
+Oklahoma,Kansas,Oklahoma City,Wichita,247
+Oklahoma,Missouri,Oklahoma City,St. Louis,738
+Oklahoma,New Mexico,Oklahoma City,Albuquerque,830
+Oklahoma,Texas,Oklahoma City,Dallas,306
+Oregon,California,Portland,Los Angeles,1329
+Oregon,Idaho,Portland,Boise,555
+Oregon,Nevada,Portland,Las Vegas,1216
+Oregon,Washington,Portland,Seattle,234
+Pennsylvania,Delaware,Philadelphia,Wilmington,40
+Pennsylvania,Maryland,Philadelphia,Baltimore,144
+Pennsylvania,New Jersey,Philadelphia,Newark,121
+Pennsylvania,New York,Philadelphia,New York,130
+Pennsylvania,Ohio,Philadelphia,Columbus,668
+Pennsylvania,West Virginia,Philadelphia,Charleston,585
+Rhode Island,Connecticut,Providence,Hartford,105
+Rhode Island,Massachusetts,Providence,Boston,66
+South Carolina,Georgia,Greenville,Atlanta,220
+South Carolina,North Carolina,Greenville,Charlotte,147
+South Dakota,Iowa,Sioux Falls,Des Moines,335
+South Dakota,Minnesota,Sioux Falls,Minneapolis,319
+South Dakota,Montana,Sioux Falls,Billings,963
+South Dakota,Nebraska,Sioux Falls,Omaha,263
+South Dakota,North Dakota,Sioux Falls,Fargo,371
+South Dakota,Wyoming,Sioux Falls,Cheyenne,716
+Tennessee,Alabama,Nashville,Birmingham,294
+Tennessee,Arkansas,Nashville,Little Rock,523
+Tennessee,Georgia,Nashville,Atlanta,346
+Tennessee,Kentucky,Nashville,Louisville,249
+Tennessee,Mississippi,Nashville,Jackson,531
+Tennessee,Missouri,Nashville,St. Louis,408
+Tennessee,North Carolina,Nashville,Charlotte,546
+Tennessee,Virginia,Nashville,Virginia Beach,968
+Texas,Arkansas,Dallas,Little Rock,471
+Texas,Louisiana,Dallas,New Orleans,711
+Texas,New Mexico,Dallas,Albuquerque,944
+Texas,Oklahoma,Dallas,Oklahoma City,306
+Utah,Arizona,Salt Lake City,Phoenix,813
+Utah,Colorado,Salt Lake City,Denver,596
+Utah,Idaho,Salt Lake City,Boise,476
+Utah,Nevada,Salt Lake City,Las Vegas,583
+Utah,New Mexico,Salt Lake City,Albuquerque,780
+Utah,Wyoming,Salt Lake City,Cheyenne,595
+Vermont,Massachusetts,Burlington,Boston,293
+Vermont,New Hampshire,Burlington,Manchester,217
+Vermont,New York,Burlington,New York,423
+Virginia,Kentucky,Virginia Beach,Louisville,876
+Virginia,Maryland,Virginia Beach,Baltimore,277
+Virginia,North Carolina,Virginia Beach,Charlotte,473
+Virginia,Tennessee,Virginia Beach,Nashville,968
+Virginia,West Virginia,Virginia Beach,Charleston,525
+Washington,Idaho,Seattle,Boise,651
+Washington,Oregon,Seattle,Portland,234
+West Virginia,Kentucky,Charleston,Louisville,360
+West Virginia,Maryland,Charleston,Baltimore,447
+West Virginia,Ohio,Charleston,Columbus,214
+West Virginia,Pennsylvania,Charleston,Philadelphia,585
+West Virginia,Virginia,Charleston,Virginia Beach,525
+Wisconsin,Illinois,Milwaukee,Chicago,131
+Wisconsin,Iowa,Milwaukee,Des Moines,497
+Wisconsin,Michigan,Milwaukee,Detroit,405
+Wisconsin,Minnesota,Milwaukee,Minneapolis,480
+Wyoming,Colorado,Cheyenne,Denver,156
+Wyoming,Idaho,Cheyenne,Boise,974
+Wyoming,Montana,Cheyenne,Billings,596
+Wyoming,Nebraska,Cheyenne,Omaha,743
+Wyoming,South Dakota,Cheyenne,Sioux Falls,716
+Wyoming,Utah,Cheyenne,Salt Lake City,595

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Makes the layout scale correctly on phones instead of rendering as a shrunken desktop page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regional Route Explorer</title>
+  <meta name="description" content="Compare routes across Europe, the United States, and Canada with BFS and Dijkstra.">
+
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://tile.openstreetmap.org">
+
+  <!-- Leaflet's own stylesheet (map tiles, zoom buttons, popups). Must load before our CSS
+       so our overrides in styles.css win. -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Two-column grid: sidebar (controls + results) on the left, map on the right.
+       On narrow screens the CSS stacks them vertically. -->
+  <div class="app-shell">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">GE</div>
+        <div>
+          <div class="eyebrow">GRAPH EXPLORER</div>
+          <h1>Regional Route Explorer</h1>
+        </div>
+      </div>
+
+      <p class="intro">
+        Compare routes between European capitals, mainland U.S. states' largest cities, and North American largest cities.
+      </p>
+
+      <!-- Endpoint selection. The <select> options are filled in by app.js (populateSelects)
+           once the CSV graph has been loaded, so they start empty here. -->
+      <section class="panel controls-panel">
+        <div class="section-heading">
+          <span>Route endpoints</span>
+          <!-- Swaps start and finish; app.js recalculates automatically if both are set -->
+          <button id="swapBtn" class="icon-btn" title="Swap start and finish" aria-label="Swap start and finish">⇄</button>
+        </div>
+
+        <label class="field-label" for="startSelect">Starting region / city</label>
+        <select id="startSelect"></select>
+
+        <label class="field-label" for="finishSelect">Finishing region / city</label>
+        <select id="finishSelect"></select>
+
+        <div class="map-hint">
+          <span class="hint-dot"></span>
+          <span>Tip: click a region on the map to set the active endpoint.</span>
+        </div>
+
+        <div class="button-row">
+          <button id="runBtn" class="primary-btn">Calculate routes</button>
+          <button id="resetBtn" class="secondary-btn">Reset</button>
+        </div>
+      </section>
+
+      <!-- Status box: app.js updates the title/text to give feedback
+           (loading, errors, "no route found", etc.) -->
+      <section id="statusPanel" class="panel status-panel">
+        <div class="status-icon">i</div>
+        <div>
+          <strong id="statusTitle">Ready</strong>
+          <p id="statusText">Load the graph, then choose two endpoints.</p>
+        </div>
+      </section>
+
+      <!-- Results are hidden until a route has been calculated (the "hidden" class is toggled in JS) -->
+      <section id="resultsPanel" class="panel results-panel hidden">
+        <div class="result-header">
+          <div>
+            <div class="eyebrow">ROUTE COMPARISON</div>
+            <h2 id="routeTitle">Route</h2>
+          </div>
+          <span id="routeBadge" class="badge">Ready</span>
+        </div>
+
+        <!-- Two headline numbers side by side: border count (BFS) and kilometres (Dijkstra) -->
+        <div class="route-summary">
+          <div class="summary-item bfs-summary">
+            <span class="summary-icon">↕</span>
+            <div>
+              <span class="summary-label">Fewest borders</span>
+              <strong id="bfsMetric">—</strong>
+            </div>
+          </div>
+          <div class="summary-item dijkstra-summary">
+            <span class="summary-icon">↗</span>
+            <div>
+              <span class="summary-label">Shortest distance</span>
+              <strong id="dijkstraMetric">—</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card for the BFS result (fewest borders crossed, ignoring distance) -->
+        <div class="route-card bfs-card">
+          <div class="route-card-head">
+            <div class="route-title-wrap">
+              <span class="route-color bfs-color"></span>
+              <div>
+                <strong>Fewest-border route</strong>
+                <span>Minimum number of borders crossed</span>
+              </div>
+            </div>
+            <span class="route-tag bfs-tag">BFS</span>
+          </div>
+          <!-- Several routes can tie for "fewest borders". This dropdown lets the user pick
+               between them; it stays hidden when there is only one route. -->
+          <label id="bfsRouteLabel" class="field-label bfs-route-label" for="bfsRouteSelector">Shortest-border route</label>
+          <select id="bfsRouteSelector" class="bfs-route-selector" hidden></select>
+          <!-- The step-by-step list of regions is rendered here by renderPath() -->
+          <div id="bfsPathList" class="route-path"></div>
+        </div>
+
+        <!-- Card for the Dijkstra result (lowest total kilometres) -->
+        <div class="route-card dijkstra-card">
+          <div class="route-card-head">
+            <div class="route-title-wrap">
+              <span class="route-color dijkstra-color"></span>
+              <div>
+                <strong>Shortest-distance route</strong>
+                <span>Minimum total distance from current graph</span>
+              </div>
+            </div>
+            <span class="route-tag dijkstra-tag">DIJKSTRA</span>
+          </div>
+          <div id="dijkstraPathList" class="route-path"></div>
+        </div>
+      </section>
+
+      <!-- Legend explaining the map colours, plus the switch between the three datasets -->
+      <section class="panel legend-panel">
+        <div class="section-heading"><span>Map legend</span></div>
+        <div class="legend-row"><span class="legend-swatch start-swatch"></span>Start</div>
+        <div class="legend-row"><span class="legend-swatch finish-swatch"></span>Finish</div>
+        <div class="legend-row"><span class="legend-line"></span>Fewest borders</div>
+        <div class="legend-row"><span class="legend-line"></span>Shortest distance</div>
+        <div class="legend-row"><span class="capital-dot"></span>City / capital</div>
+        <div class="map-choice">
+          <span class="field-label">Map</span>
+          <!-- data-map values must match the keys of the MAPS object in app.js.
+               aria-pressed is used both for accessibility and for the "selected" styling in CSS. -->
+          <div class="map-switch" role="group" aria-label="Choose map">
+            <button type="button" data-map="europe" aria-pressed="true">Europe</button>
+            <button type="button" data-map="usa" aria-pressed="false">USA</button>
+            <button type="button" data-map="northAmerica" aria-pressed="false">US + CA</button>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <!-- Shows how many regions/edges were loaded, or a data-load error -->
+        <span id="dataStatus">Waiting for eu.csv…</span>
+        <span>Leaflet + vanilla JS</span>
+      </footer>
+    </aside>
+
+    <!-- ========== MAP AREA ========== -->
+    <main class="map-area">
+      <!-- Leaflet renders the interactive map into this element -->
+      <div id="map"></div>
+
+      <!-- Small floating UI elements layered on top of the map -->
+      <div class="map-overlay top-left">
+        <div class="map-pill"><span class="live-dot"></span> <span id="mapTitle">Europe</span></div>
+      </div>
+      <div class="map-overlay top-right">
+        <!-- Re-centres the map on the whole dataset; its label is updated when the map changes -->
+        <button id="fitBtn" class="map-control-btn">Fit Europe</button>
+      </div>
+      <!-- Loading indicator; app.js fades it out when data has loaded, or shows an error in it -->
+      <div id="loading" class="loading-card">
+        <div class="spinner"></div>
+        <span>Loading Europe map…</span>
+      </div>
+    </main>
+  </div>
+
+  <!-- Leaflet must be loaded before app.js because app.js uses the global "L" object -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
