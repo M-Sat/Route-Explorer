@@ -6,7 +6,7 @@ An interactive, browser-based map for exploring routes across Europe, the contig
 <img width="1920" height="888" alt="image" src="https://github.com/user-attachments/assets/eae324c7-c0ee-45e5-a734-489ff6308697" />
 
 ## Link
-Site deployed at https://m-sat.github.io/Route-Explorer/
+https://m-sat.github.io/Route-Explorer/
 
 ## Features
 
